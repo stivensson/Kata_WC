@@ -1,0 +1,15 @@
+$sw-le: 1440px;
+
+.body-wrapper {
+  @media (min-width: $sw-le) {
+    display: flex;
+  }
+}
+
+.blur-body-wrapper {
+  opacity: 0.1;
+}
+
+.blur-body-wrapper-feedback {
+  opacity: 0.1;
+}

@@ -1,0 +1,118 @@
+$sw-le: 1440px;
+
+.modal-call {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  transform: translateX(600px);
+  transition: 0.3s;
+  width: 320px;
+  height: 1925px;
+  background: #ffffff;
+  box-shadow: 16px 0 50px 0 rgba(0, 0, 0, 0.2);
+
+  @media (min-width: $sw-le) {
+    width: 440px;
+  }
+
+  &__close {
+    background: url('../img/close.svg');
+    border-style: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    margin: 24px 0 0 16px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      transition: 1s;
+    }
+
+    @media (min-width: $sw-le) {
+      position: absolute;
+      left: -88px;
+      top: 8px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    height: 40px;
+    margin: 32px 0 0 0;
+    align-items: center;
+
+    .modal-call__leftborder {
+      width: 4px;
+      height: 40px;
+      background-color: #41f6d7;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .modal-call__h2 {
+      padding-left: 12px;
+
+      @media (min-width: $sw-le) {
+        padding-left: 28px;
+      }
+
+      h2 {
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  & form {
+    padding: 24px 16px 16px;
+    text-align: right;
+
+    @media (min-width: $sw-le) {
+      padding: 24px 32px 16px;
+    }
+
+    input {
+      padding: 0 0 0 16px;
+      width: 270px;
+      height: 46px;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+
+      @media (min-width: $sw-le) {
+        width: 358px;
+      }
+    }
+
+    .modal-call__privacy {
+      margin: 16px 0;
+      font-size: 14px;
+      text-align: left;
+
+      span {
+        color: rgba(255, 62, 121, 1);
+      }
+    }
+
+    .modal-call__submit {
+      border-style: none;
+      padding: 0;
+      background: url('../img/submit.svg');
+      width: 136px;
+      height: 32px;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: 1s;
+      }
+    }
+  }
+}
+
+.modal-call-show {
+  transform: translateX(0);
+  transition: 0.3s;
+}

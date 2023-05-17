@@ -1,0 +1,134 @@
+$sw-md: 768px;
+$sw-lg: 1120px;
+$lc: #7e7e82;
+
+.swiper-price__header {
+  min-width: 320px;
+  height: 56px;
+  background-image: linear-gradient(to right, #f8f8f8 2%, #ffffff 80%);
+  border-top: 1px solid #d9fff5;
+
+  span {
+    display: block;
+    color: $lc;
+    text-transform: uppercase;
+    line-height: 24px;
+    margin: 16px;
+
+    @media (min-width: $sw-md) {
+      margin-left: 24px;
+    }
+
+    @media (min-width: $sw-lg) {
+      margin-left: 32px;
+    }
+  }
+}
+
+.swiper-price__title {
+  display: none;
+
+  @media (min-width: $sw-md) {
+    display: grid;
+    grid-template-columns: 3fr 0.7fr 1.7fr;
+    margin: 32px 40px 16px 24px;
+    padding-left: 16px;
+    color: $lc;
+  }
+
+  @media (min-width: $sw-lg) {
+    margin: 32px 56px 16px 40px;
+  }
+}
+
+.swiper-price__shadow-wrapper {
+  position: relative;
+
+  .swiper-price__shadow {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    width: 24px;
+    height: 200px;
+    background-image: linear-gradient(to right, transparent 5%, #f8f8f8 80%);
+    z-index: 2;
+
+    @media (min-width: $sw-md) {
+      display: none;
+    }
+  }
+}
+
+.swiper-price__slider {
+  height: 260px;
+  background-color: #f8f8f8;
+
+  @media (min-width: $sw-md) {
+    height: 324px;
+    padding: 0 24px 32px 24px;
+    display: block;
+  }
+  @media (min-width: $sw-lg) {
+    padding: 0 32px 32px 32px;
+  }
+
+  .swiper-price__wrapper {
+    padding: 16px;
+
+    @media (min-width: $sw-md) {
+      display: block;
+      padding: 0;
+      background: #ffffff;
+      border-radius: 6px;
+    }
+
+    .swiper-price__slide {
+      min-width: 260px;
+      height: 199px;
+      padding-top: 1px;
+      border-radius: 6px;
+      background: url('../img/order.svg') no-repeat right 16px bottom 16px,
+        #ffffff;
+
+      @media (min-width: $sw-md) {
+        display: grid;
+        grid-template-columns: 3fr 0.7fr 1.7fr;
+        align-items: center;
+        width: auto;
+        height: 64px;
+        border-radius: 0;
+        padding: 0;
+        margin: 0 16px;
+        border-bottom: 1px solid #eaeaea;
+        background: url('../img/order.svg') no-repeat right 0 bottom 16px;
+      }
+
+      @media (min-width: $sw-lg) {
+        margin: 0 24px;
+      }
+
+      span {
+        display: block;
+        margin-left: 16px;
+        font-size: 14px;
+
+        @media (min-width: $sw-md) {
+          margin: 0;
+        }
+      }
+
+      .span-hidden {
+        margin: 16px 0 4px 0;
+        color: $lc;
+
+        @media (min-width: $sw-md) {
+          display: none;
+        }
+      }
+    }
+
+    .last-slide {
+      border-bottom: none;
+    }
+  }
+}

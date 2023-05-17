@@ -1,0 +1,130 @@
+$sw-md: 768px;
+$sw-lg: 1120px;
+
+.swiper-repair__header {
+  min-width: 320px;
+  height: 80px;
+  background-image: linear-gradient(to right, #f8f8f8 2%, #ffffff 80%);
+  border-top: 1px solid #d9fff5;
+
+  @media (min-width: $sw-md) {
+    height: 56px;
+  }
+
+  span {
+    display: block;
+    color: #7e7e82;
+    text-transform: uppercase;
+    line-height: 24px;
+    margin: 16px;
+
+    @media (min-width: $sw-md) {
+      margin-left: 24px;
+    }
+
+    @media (min-width: $sw-lg) {
+      margin-left: 32px;
+    }
+  }
+}
+
+.swiper-repair__shadow-wrapper {
+  position: relative;
+
+  .swiper-repair__shadow {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    width: 24px;
+    height: 160px;
+    background-image: linear-gradient(to right, transparent 5%, #f8f8f8 80%);
+    z-index: 2;
+
+    @media (min-width: $sw-md) {
+      display: none;
+    }
+  }
+}
+
+.swiper-repair__slider {
+  height: 228px;
+  background-color: #f8f8f8;
+
+  @media (min-width: $sw-md) {
+    height: 184px;
+  }
+
+  .swiper-repair__wrapper {
+    padding: 16px;
+
+    @media (min-width: $sw-md) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 160px);
+      row-gap: 16px;
+      column-gap: 24px;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: $sw-lg) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 32px;
+      padding: 24px 32px;
+    }
+
+    .swiper-repair__slide {
+      min-width: 222px;
+      height: 158px;
+      border: 1px solid #eaeaea;
+      border-radius: 6px;
+      background: url('../img/arrowGo.svg') no-repeat right 16px bottom 16px,
+        #ffffff;
+
+      span {
+        display: block;
+        margin: 16px 0 0 16px;
+      }
+    }
+  }
+}
+
+.swiper-repair__spoiler {
+  display: none;
+
+  @media (min-width: $sw-md) {
+    margin: 24px 0 32px 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    border-style: none;
+    width: 150px;
+    padding: 0;
+  }
+
+  @media (min-width: $sw-lg) {
+    margin-left: 32px;
+  }
+
+  &:hover {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &::before {
+    content: url('../img/expanddown.svg');
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.swiper-repair__spoiler_hidden::before {
+  content: url('../img/expandup.svg');
+  width: 24px;
+  height: 24px;
+}
+
+.swiper-repair_show {
+  height: auto;
+}
